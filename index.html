@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tododlist</title>
+    <!-- GOOGLEFONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- CUSTOM STYLE CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <div class="container">
+                <div class="inputContainer d-flex">
+                    <input type="text" v-model="newGame" name="text" class="txt" placeholder="Add your game to list..">
+                    <i @click="addGame(newGame)" class="add-G fa-solid fa-circle-plus"></i>
+                </div>
+                <ul class="todo">
+                    <li v-for="element in gameList" class="todoItem d-flex" 
+                    v-bind:class="(element.done === false) ? 'through' : ''">
+                        {{element.title}}
+                        <div>
+                            <i @click="deleteGame(element)" class="fa-solid fa-square-xmark"></i>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

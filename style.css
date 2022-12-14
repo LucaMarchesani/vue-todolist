@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex{
+    display: flex;
+}
+
+body{
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages8.alphacoders.com%2F107%2Fthumb-1920-1074972.jpg&f=1&nofb=1&ipt=bc78e01e2557304056e5628f921f2edd9a687747632453d6f2ac884edbe55164&ipo=images);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Indie Flower', cursive;
+}
+
+div.container{
+    margin: 2.5rem 2rem;
+}
+
+input.txt{
+    border-radius: 16px;
+    width: 27.4rem;
+    margin: 0 .8rem 1rem 0; 
+    border: none;
+    background-color: whitesmoke;
+    padding: .5rem;
+}
+
+i.add-G{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: lime;
+}
+
+ul.todo{
+    width: 34%;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+li.todoItem{
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid whitesmoke;
+    border-bottom: 0;
+    color: magenta;
+    padding: .5rem .5rem 0;
+    font-size: 1.5rem;
+    background-color: rgb(33, 33, 33);
+    
+}
+
+li.todoItem.through{
+    text-decoration: line-through 2px whitesmoke;
+}
+
+ul.todo li:last-child{
+    border-bottom: 2px solid whitesmoke;
+}
+
+li.todoItem div>i{
+    font-size: 2rem;
+    color: red;
+}
